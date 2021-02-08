@@ -79,4 +79,41 @@ export class PaintCalculatorService {
     }
   }
 
+  roomAreaTotal(walls : number[]){
+    const roomTotalArea = walls.reduce((roomTotalArea, currentElement) => roomTotalArea + currentElement)
+    return roomTotalArea;
+  }
+
+  paintCount(walls : number[]){
+    let roomArea = this.roomAreaTotal(walls);
+    let biggesTin = 0;
+    let bigTin = 0;
+    let mediumTin = 0;
+    let smallTin = 0;
+    while (roomArea > 0){
+      if (roomArea >= 90){
+        biggesTin += 1;
+        roomArea -= 90;
+      }
+      else if (roomArea >= 18){
+        bigTin += 1;
+        roomArea -= 18
+      }
+      else if (roomArea >= 12.5){
+        mediumTin += 1;
+        roomArea -= 12.5
+      }
+      else if (roomArea >= 2.5){
+        smallTin += 1;
+        roomArea -= 2.5
+      }
+      else {
+        smallTin += 1;
+        roomArea -= roomArea;
+      }
+    }
+    return `Para pintar essa sala é preciso ${biggesTin} latas de 18L, ${bigTin} latas de 3.6L, ${mediumTin} latas de 2.5L e
+            ${smallTin} latas de 0.5L !`
+  }
+
 }

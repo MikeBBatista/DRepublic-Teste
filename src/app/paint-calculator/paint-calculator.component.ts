@@ -15,6 +15,7 @@ export class PaintCalculatorComponent implements OnInit {
   @ViewChild('doorNumber') doorCount!: ElementRef;
   @ViewChild('saveButton') saveWall!: ElementRef;
   walls: number[] = [];
+  result!: string;
 
   constructor(private paintCalculatorService: PaintCalculatorService) { }
 
@@ -27,6 +28,15 @@ export class PaintCalculatorComponent implements OnInit {
                      this.doorCount, this.winCount, this.doorCount);
     
     this.paintCalculatorService.wallList(areaUtil, this.walls, this.saveWall);
+  }
+
+  finalResult(){
+    if (this.walls.length < 4){
+      alert('Número de paredes incompleto!');
+    }
+    else {
+      this.result = this.paintCalculatorService.paintCount(this.walls)
+    }
   }
 
   ngOnInit(): void {
