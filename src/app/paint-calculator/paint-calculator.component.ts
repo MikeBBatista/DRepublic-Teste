@@ -20,6 +20,7 @@ export class PaintCalculatorComponent implements OnInit {
   allValidation(){
     this.paintCalculatorService.validWalls(this.widInput);
     this.paintCalculatorService.validWalls(this.heiInput);
+    this.paintCalculatorService.doorValidation(this.heiInput, this.doorCount);
   }
 
   ngOnInit(): void {
