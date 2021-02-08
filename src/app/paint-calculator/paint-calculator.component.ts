@@ -1,6 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
-import {PaintCalculatorService} from './paint-calculator.service'
+import { PaintCalculatorService } from './paint-calculator.service'
 
 @Component({
   selector: 'app-paint-calculator',
@@ -16,12 +16,15 @@ export class PaintCalculatorComponent implements OnInit {
   @ViewChild('saveButton') saveWall!: ElementRef;
   walls: number[] = [];
 
-  constructor(private paintCalculatorService : PaintCalculatorService ) { }
+  constructor(private paintCalculatorService: PaintCalculatorService) { }
 
-  allValidation(){
+  allValidation() {
     this.paintCalculatorService.validWalls(this.widInput);
     this.paintCalculatorService.validWalls(this.heiInput);
     this.paintCalculatorService.doorValidation(this.heiInput, this.doorCount);
+    const areaUtil = this.paintCalculatorService.wallToElements(this.widInput, this.heiInput, this.winCount,
+                     this.doorCount, this.winCount, this.doorCount);
+    
   }
 
   ngOnInit(): void {
