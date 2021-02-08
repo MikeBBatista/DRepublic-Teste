@@ -19,7 +19,7 @@ export class PaintCalculatorService {
   validWalls(wallSide : ElementRef){
     const inputValue = Number(wallSide.nativeElement.value);
     if (inputValue < 1 || inputValue > 15){
-      alert('Número inserido está fora do range permitido!');
+      alert('O número inserido está fora do tamanho permitido!');
       wallSide.nativeElement.value = '';
     }
   }
@@ -38,5 +38,4 @@ export class PaintCalculatorService {
     }
   }
 
-  
 }
