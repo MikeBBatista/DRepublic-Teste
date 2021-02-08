@@ -22,9 +22,11 @@ export class PaintCalculatorComponent implements OnInit {
     this.paintCalculatorService.validWalls(this.widInput);
     this.paintCalculatorService.validWalls(this.heiInput);
     this.paintCalculatorService.doorValidation(this.heiInput, this.doorCount);
+    
     const areaUtil = this.paintCalculatorService.wallToElements(this.widInput, this.heiInput, this.winCount,
                      this.doorCount, this.winCount, this.doorCount);
     
+    this.paintCalculatorService.wallList(areaUtil, this.walls, this.saveWall);
   }
 
   ngOnInit(): void {

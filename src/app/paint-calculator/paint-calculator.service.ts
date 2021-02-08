@@ -37,7 +37,7 @@ export class PaintCalculatorService {
       wallHei.nativeElement.value = '';
     }
   }
-  
+
   wallUtilArea(wallWid : ElementRef, wallHei: ElementRef, winCount: ElementRef, doorCount: ElementRef){
     
     return this.wallArea(this.elementToNumber(wallWid), this.elementToNumber(wallHei)) - this.winDoorArea
@@ -57,6 +57,25 @@ export class PaintCalculatorService {
     }
     else {
       return this.wallUtilArea(wallWid, wallHei, winCount, doorCount);
+    }
+  }
+  disableButton(buttonDisabled : ElementRef) {
+    buttonDisabled.nativeElement.disabled = true;
+  }
+
+  enableButton(buttonEnable : ElementRef) {
+    buttonEnable.nativeElement.disabled = false;
+  }
+  
+  wallList(areaUtil: any, room : number[], saveButton: ElementRef){
+    if (typeof areaUtil == 'number'){
+      if (room.length < 4){
+        room.push(areaUtil);
+      }
+      else {
+        alert('Quatro paredes já foram cadastradas!')
+        this.disableButton(saveButton);
+      }
     }
   }
 
