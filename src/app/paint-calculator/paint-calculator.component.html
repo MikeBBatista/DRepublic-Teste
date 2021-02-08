@@ -11,7 +11,7 @@
     <br><br>
     <button class="btn btn-primary" (click)="allValidation()" #saveButton>Salvar Parede</button>
     <button class="btn btn-primary" (click)="finalResult()" #finalButton>Resultado Final</button>
-    <button class="btn btn-primary" #limparButton>Limpar Valores</button>
+    <button class="btn btn-primary" (click)="refreshAll($event)" #limparButton>Limpar Valores</button>
 </div>
 <div class="alert alert-info" role="alert">
     <h5>Área útil total de cada parede em m²</h5>

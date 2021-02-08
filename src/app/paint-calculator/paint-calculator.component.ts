@@ -39,6 +39,12 @@ export class PaintCalculatorComponent implements OnInit {
     }
   }
 
+  refreshAll(evento : MouseEvent){
+    this.walls = [];
+    this.result = '';
+    this.paintCalculatorService.enableButton(this.saveWall);
+  }
+
   ngOnInit(): void {
   }
 
