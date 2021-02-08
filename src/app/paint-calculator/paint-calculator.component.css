@@ -1,0 +1,27 @@
+  
+p {
+    color: black;
+    text-align: center;
+    display: inline-block;
+}
+  
+div {
+    display: inline-flexbox;
+    text-align: center;
+    font-size: 20px;
+    margin: auto;
+}
+
+input {
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+}
+
+button {
+    margin: 2%;
+    background-color:rgb(71, 71, 71);
+}
+
+ul {
+    list-style-position: inside;
+}
