@@ -14,6 +14,7 @@ export class PaintCalculatorComponent implements OnInit {
   @ViewChild('windNumber') winCount!: ElementRef;
   @ViewChild('doorNumber') doorCount!: ElementRef;
   @ViewChild('saveButton') saveWall!: ElementRef;
+  walls: number[] = [];
 
   constructor(private paintCalculatorService : PaintCalculatorService ) { }
 
