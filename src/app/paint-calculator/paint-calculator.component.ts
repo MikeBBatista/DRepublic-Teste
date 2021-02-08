@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import {PaintCalculatorService} from './paint-calculator.service'
+
 @Component({
   selector: 'app-paint-calculator',
   templateUrl: './paint-calculator.component.html',
