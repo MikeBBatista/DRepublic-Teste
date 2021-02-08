@@ -23,4 +23,20 @@ export class PaintCalculatorService {
       wallSide.nativeElement.value = '';
     }
   }
+
+  elementToNumber(inputValue: ElementRef){
+    const inputNumb = Number(inputValue.nativeElement.value);
+    return inputNumb;
+  }
+
+  doorValidation(wallHei : ElementRef, doorCount : ElementRef) {
+    const door = this.elementToNumber(doorCount);
+    const wallDoor = (this.elementToNumber(wallHei)) - 1.90;
+    if (wallDoor < 0.30 && door >= 1){
+        alert('A altura da porta não é viável para essa parede!')
+        wallHei.nativeElement.value = '';
+    }
+  }
+
+  
 }
