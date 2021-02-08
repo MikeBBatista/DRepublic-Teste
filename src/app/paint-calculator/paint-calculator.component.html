@@ -9,7 +9,7 @@
     <p>Número de Portas:</p>
     <input type="number" min="1" value="0" #doorNumber/>
     <br><br>
-    <button class="btn btn-primary" #saveButton>Salvar Parede</button>
+    <button class="btn btn-primary" (click)="allValidation()" #saveButton>Salvar Parede</button>
     <button class="btn btn-primary" #finalButton>Resultado Final</button>
     <button class="btn btn-primary" #limparButton>Limpar Valores</button>
 </div>

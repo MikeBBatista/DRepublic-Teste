@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 import {PaintCalculatorService} from './paint-calculator.service'
 
@@ -9,7 +9,18 @@ import {PaintCalculatorService} from './paint-calculator.service'
 })
 export class PaintCalculatorComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild('widthInput') widInput!: ElementRef;
+  @ViewChild('heightInput') heiInput!: ElementRef;
+  @ViewChild('windNumber') winCount!: ElementRef;
+  @ViewChild('doorNumber') doorCount!: ElementRef;
+  @ViewChild('saveButton') saveWall!: ElementRef;
+
+  constructor(private paintCalculatorService : PaintCalculatorService ) { }
+
+  allValidation(){
+    this.paintCalculatorService.validWalls(this.widInput);
+    this.paintCalculatorService.validWalls(this.heiInput);
+  }
 
   ngOnInit(): void {
   }
