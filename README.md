@@ -1,27 +1,49 @@
-# DRepublicTeste
+# # <center> Teste técnico [Digital Republic](https://www.digitalrepublic.com.br) </center> :pencil:
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.4.
+### Desenvolvedor :nerd_face:
 
-## Development server
+* [Mike Barcelos](https://www.linkedin.com/in/mike-barcelos-b4648016a/)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Do que se trata a aplicação?
 
-## Code scaffolding
+O [teste](https://gitlab.com/digitalrepublic/code-challenge) consiste em criar uma aplicação web que cálcule a quantidade necessária de tinta para área de uma sala de quatro paredes, seguindo as restrinções das regras de negócio fornecidas, de forma que seu desenvolvimento siga um padrão técnico minimo esperado.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### TUTORIAL :rainbow:
 
-## Build
+### Ferramentas :wrench:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Para desenvolver a aplicação foi utilizado:
 
-## Running unit tests
+- [NodeJS v15.8.0](https://nodejs.org/en/) :coffee:
+- Typescript v4.1.3
+- Angular CLI v11.1.4
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Dica Útil :bulb:
 
-## Running end-to-end tests
+Caso esteja usando o Linux é necessário utilizar "sudo" no inicio cada comando:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Instale o NodeJS através do link na parte das Ferramentas. Depois de ter o NodeJS instalado, instale o Angular CLI com o comando:
+                         ```npm install -g @angular/cli```
+  
+Caso tenha problemas para instalar o Angular CLI por conta da versão do npm, rode o comando:
 
-## Further help
+                         ```npm install -g npm@6```
+                         
+E logo depois tente instalar o Angular CLI de novo rodando:
+                         ```npm install -g @angular/cli```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Por fim instale o Typescript:
+                         ```npm install -g typescript```
+
+### Iniciando o projeto :cd:
+ 
+ 
+Após preparar o ambiente de desenvolvimento com as ferramentas, clone o projeto no seu computador. Com o cmd navegue até onde clonar o projeto  e com o [GIT](https://git-scm.com/downloads) instalado utilize o comando:
+
+                         ```git clone https://github.com/MikeBBatista/DRepublic-Teste```
+
+Ao terminar a clonagem, entre na pasta raíz do projeto e rode o comando:
+
+                         ```ng serve```
+
+Agora a aplicação está hospedada no [localhost](http://localhost:4200/) de porta 4200, e pode ser acessada.
