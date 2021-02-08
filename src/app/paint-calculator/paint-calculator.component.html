@@ -13,3 +13,12 @@
     <button class="btn btn-primary" #finalButton>Resultado Final</button>
     <button class="btn btn-primary" #limparButton>Limpar Valores</button>
 </div>
+<div class="alert alert-info" role="alert">
+    <h5>Área útil total de cada parede em m²</h5>
+    <ul>
+        <li *ngFor="let wall of walls">
+        {{ wall }}
+        </li>
+    </ul>
+
+</div>
